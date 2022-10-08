@@ -15,7 +15,6 @@ let resultArea = document.getElementById("resultArea");
 let resetBtn = document.getElementById("resetBtn");
 let chancesArea = document.getElementById("chancesArea");
 let chances = 5;
-let gameOver = false;
 let history = [];
 
 playBtn.addEventListener("click", play);
@@ -64,8 +63,7 @@ function play() {
   history.push(userValue);
   console.log("남은 기회 :", chances, "입력한 숫자 :", history);
 
-  if (chances < 1) {
-    gameOver = true;
+  if (chances < 1 && userValue != computerNum) {
     playBtn.disabled = true;
     resultArea.textContent = "Game Over";
     resultImg.src = "https://media.giphy.com/media/dkuZHIQsslFfy/giphy.gif";
@@ -76,6 +74,7 @@ function reset() {
   resultArea.textContent = "결과가 나옵니다.";
   resultImg.src = "https://media.giphy.com/media/VwM9w72cXiSHu/giphy.gif";
   userInput.value = "";
+  history;
   history = [];
   chances = 5;
   chancesArea.textContent = "남은 기회 : 5번";
