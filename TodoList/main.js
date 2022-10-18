@@ -98,8 +98,6 @@ function fliter(event) {
 
   document.getElementById("under-line").style.width =
     event.target.offsetWidth + "px";
-  document.getElementById("under-line").style.top =
-    event.target.offsetTop + event.target.offsetBottom;
   document.getElementById("under-line").style.left =
     event.target.offsetLeft + "px";
 
