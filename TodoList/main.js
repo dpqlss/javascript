@@ -7,10 +7,6 @@
 // 7. Not Done 메뉴를 누르면 끝낸 List 목록들이 보여진다.
 // 8. Done 메뉴를 누르면 해야하는 List 목록들이 보여진다.
 
-// check 버튼을 클릭하는 순간 true false
-// true이면 끝난걸로 간주하고 밑줄 보여주기
-// false이면 안끝난걸로 간주하고 그대로
-
 let taskInput = document.getElementById("taskInput");
 let addBtn = document.getElementById("addBtn");
 let taskList = [];
@@ -102,11 +98,9 @@ function fliter(event) {
 
   document.getElementById("under-line").style.width =
     event.target.offsetWidth + "px";
-  document.getElementById("under-line").style.top =
-    event.target.offsetTop + event.target.offsetBottom;
-
   document.getElementById("under-line").style.left =
     event.target.offsetLeft + "px";
+
   if (mode == "all") {
     render();
   } else if (mode == "ongoing") {
